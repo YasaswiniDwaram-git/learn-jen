@@ -13,3 +13,15 @@ pipeline {
         }
     }
 }
+
+post{
+    always{
+        echo "This section runs always"
+}
+    success{
+        echo 'This runs upon success'
+}
+    failure{
+        echo 'This runs upon failure'
+}
+}
