@@ -6,7 +6,7 @@ pipeline {
                 echo 'Hey World'
             }
         }
-        stage('Test'){
+        stage('Test1'){
             steps{
                 echo 'This is test'
             }
