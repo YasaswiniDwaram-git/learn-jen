@@ -12,7 +12,6 @@ pipeline {
             }
         }
     }
-}
 
 post{
     always{
@@ -23,5 +22,6 @@ post{
 }
     failure{
         echo 'This runs upon failure'
+}
 }
 }
