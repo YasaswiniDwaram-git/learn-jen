@@ -3,7 +3,7 @@ pipeline {
         label 'AGENT-1'
     }
     options{
-        timeout(time: 5 ,unit:'SECONDS')
+        timeout(time: 10 ,unit:'SECONDS')
         disableConcurrentBuilds()
     }
     parameters{
@@ -23,7 +23,7 @@ pipeline {
                 echo 'Hey World'
             }
         }
-        stage('Print Params')
+        stage('Print Params'){
 			steps {
 			
 				echo "Hello ${params.PERSON}"
@@ -36,6 +36,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
 				}
+        }
         stage('Test1'){
             steps{
                 echo 'This is test'
