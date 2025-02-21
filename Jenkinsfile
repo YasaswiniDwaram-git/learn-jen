@@ -20,7 +20,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Heyaaaa World'
+                echo 'Hmmm World'
             }
         }
         stage('Print Params'){
