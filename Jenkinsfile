@@ -49,6 +49,14 @@ pipeline {
                 echo "Hello,${PERSON},nice to meet you."
             }
         }
+        stage('Deploy') {
+            when {
+                expression { env.GIT_BRANCH = 'origin/main' }
+                }
+            steps {
+                echo 'Production has started'
+            }
+            }
         stage('Test1'){
             steps{
                 echo 'This is test'
