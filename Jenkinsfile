@@ -51,7 +51,7 @@ pipeline {
         }
         stage('Deploy') {
             when {
-                expression { env.GIT_BRANCH = 'origin/main' }
+                expression { env.GIT_BRANCH = 'prod' }
                 }
             steps {
                 echo 'Production has started'
